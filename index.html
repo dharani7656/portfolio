@@ -1,222 +1,855 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DharaniDhar Panda | Cybersecurity Portfolio</title>
-  <meta name="description" content="Portfolio of Your Name - Cybersecurity Expert, Python Developer, OSINT Enthusiast, and Bug Bounty Hunter.">
-  <meta name="keywords" content="Cybersecurity, Python Developer, OSINT, Bug Bounty, Phishing Detection">
-  <meta name="author" content="Your Name">
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="js/contact.js"></script>
-  <style>
-    body {
-      background-color: #0f172a;
-      color: white;
-      font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
-    }
-    .fade-in {
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    /* Responsive Navigation */
-    #menu {
-      transition: transform 0.3s ease-in-out;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DharaniDhar Panda - Cybersecurity Specialist | SOC Analyst | Penetration Tester</title>
+    <meta name="description" content="Professional cybersecurity specialist with expertise in SOC Analysis, Network Security, Penetration Testing, Threat Intelligence, and OSINT Investigations.">
+    <meta name="keywords" content="cybersecurity, SOC analyst, penetration testing, OSINT, KQL, Wireshark, Burp Suite, threat intelligence, network security">
+    <meta name="author" content="DharaniDhar Panda">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="DharaniDhar Panda - Cybersecurity Specialist">
+    <meta property="og:description" content="Professional cybersecurity specialist with expertise in SOC Analysis, Network Security, Penetration Testing, Threat Intelligence, and OSINT Investigations.">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
-<body class="antialiased">
-
-  <!-- Navigation -->
-  <header class="p-6 bg-gray-900 shadow-lg relative">
-    <nav class="flex justify-between items-center max-w-7xl mx-auto">
-      <a href="#" class="text-3xl font-bold text-blue-400">DharaniDhar Panda</a>
-
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex space-x-8 text-lg">
-        <li><a href="#about" class="hover:text-blue-400">About</a></li>
-        <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
-        <li><a href="#certifications" class="hover:text-blue-400">Certifications</a></li>
-        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
-      </ul>
-
-      <!-- Social Media Links -->
-      <div class="hidden md:flex space-x-4">
-        <a href="https://www.linkedin.com/in/dharanidhar-panda-92491724b/" target="_blank" class="text-blue-400 hover:text-white">LinkedIn</a>
-        <a href="https://github.com/dharani7656" target="_blank" class="text-blue-400 hover:text-white">GitHub</a>
-      </div>
-
-      <!-- Mobile Menu Button -->
-      <button id="menu-btn" class="md:hidden text-blue-400 text-3xl">☰</button>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">DharaniDhar</span>
+                <span class="brand-accent">Panda</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#expertise" class="nav-link">Expertise</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="menu" class="hidden absolute bg-gray-800 text-white w-full left-0 mt-4 p-6 space-y-4 shadow-lg z-50">
-      <ul class="space-y-4">
-        <li><a href="#about" class="block hover:text-blue-400">About</a></li>
-        <li><a href="#projects" class="block hover:text-blue-400">Projects</a></li>
-        <li><a href="#certifications" class="block hover:text-blue-400">Certifications</a></li>
-        <li><a href="#contact" class="block hover:text-blue-400">Contact</a></li>
-        <li><a href="https://www.linkedin.com/in/dharanidhar-panda-92491724b/" target="_blank" class="text-blue-400 hover:text-white">LinkedIn</a></li>
-        <li><a href="https://github.com/dharani7656" target="_blank" class="text-blue-400 hover:text-white">GitHub</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="about" class="text-center py-32 fade-in">
-    <div class="flex flex-col-reverse md:flex-row items-center max-w-7xl mx-auto">
-
-      <!-- Text Content -->
-      <div class="md:w-1/2 p-6">
-        <h1 class="text-5xl font-extrabold mb-4 leading-tight">Hi, I'm <span class="text-blue-400">DharaniDhar Panda</span></h1>
-        <p class="text-xl mb-8">
-          Cybersecurity Specialist | Python Developer | OSINT & Web Pentester
-        </p>
-        <a href="#projects" class="bg-blue-500 hover:bg-blue-600 px-8 py-3 rounded-full text-lg transition-all">
-          Explore My Work →
-        </a>
-      </div>
-
-      <!-- Cut-out Photo -->
-      <div class="md:w-1/2 mb-8 md:mb-0">
-        <img src="assets/images/hero4.jpeg" 
-          alt="Your Photo" 
-          class="w-64 h-64 md:w-96 md:h-96 mx-auto rounded-full shadow-lg object-cover">
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="fade-in mb-16">
-    <h2 class="text-4xl font-bold text-blue-400 mb-6 text-center">Projects</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
-        <h3 class="text-2xl mb-4">Phishing Detection ML Model</h3>
-        <p>Implemented a Logistic Regression model using Scikit-learn to detect phishing emails.</p>
-        <a href="https://github.com/dharani7656/-Real-Time-Phishing-Detection-with-ML" target="_blank" class="text-blue-400 hover:underline">View on GitHub →</a>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <h3 class="text-2xl mb-4">Phishing Detection System</h3>
-        <p>Flask-based app for real-time phishing detection with ML and Gmail OAuth.</p>
-        <a href="https://ml-based-phishing-detection.onrender.com" target="_blank" class="text-blue-400 hover:underline">Live Demo →</a>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <h3 class="text-2xl mb-4">Face Recognition App</h3>
-        <p>Flask-based face recognition system using OpenCV and ML.</p>
-        <a href="https://github.com/dharani7656/genderapp" class="text-blue-400 hover:underline">View Project →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Certifications Section -->
-<section id="certifications" class="fade-in mb-16">
-    <h2 class="text-4xl font-bold text-blue-400 mb-12 text-center">Certifications</h2>
-  
-    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-  
-      <!-- Certification Card -->
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
-        <h3 class="text-2xl mb-2 font-semibold text-white">Cybersecurity Analyst Job Simulation</h3>
-        <p class="text-gray-400">Tata Group | Oct 2024</p>
-        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Tata/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_n5jtYJ84WwJzeFD5T_1730130571474_completion_certificate.pdf" class="text-blue-400 hover:underline mt-4 inline-block">View Certificate →</a>
-      </div>
-  
-      <!-- Certification Card -->
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
-        <h3 class="text-2xl mb-2 font-semibold text-white">Cybersecurity Analyst Job Simulation</h3>
-        <p class="text-gray-400">Mastercard | Oct 2024</p>
-        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/mastercard/vcKAB5yYAgvemepGQ_mfxGwGDp6WkQmtmTf_n5jtYJ84WwJzeFD5T_1730032702020_completion_certificate.pdf" class="text-blue-400 hover:underline mt-4 inline-block">View Certificate →</a>
-      </div>
-  
-      <!-- Certification Card -->
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
-        <h3 class="text-2xl mb-2 font-semibold text-white">Learn Ethical Hacking from Scratch</h3>
-        <p class="text-gray-400">Udemy | Jan 2025</p>
-        <a href="https://www.udemy.com/certificate/UC-3cdb31df-2f90-460e-a966-6e53bb197260/" class="text-blue-400 hover:underline mt-4 inline-block">View Certificate →</a>
-      </div>
-  
-   
-  
-    </div>
-  </section>
-  
-
-  <!-- Contact Section -->
-<section id="contact" class="fade-in mb-16">
-    <h2 class="text-4xl font-bold text-blue-400 mb-12 text-center">Contact Me</h2>
-  
-    <div class="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
-      <form id="contactForm" class="space-y-6">
-        <div>
-          <label for="name" class="block text-lg mb-2">Your Name</label>
-          <input type="text" id="name" name="name" required
-                 placeholder="Enter your name"
-                 class="w-full p-3 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-400">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="cyber-grid"></div>
+            </div>
         </div>
-  
-        <div>
-          <label for="email" class="block text-lg mb-2">Your Email</label>
-          <input type="email" id="email" name="email" required
-                 placeholder="Enter your email"
-                 class="w-full p-3 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-400">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="hero-photo">
+  <div class="photo-wrapper">
+    <img src="assets/images/hero4.jpeg" alt="Professional Photo" class="profile-photo" />
+  </div>
+</div>
+
+                </div>
+                <div class="hero-right">
+                    <h1 class="hero-name">DharaniDhar Panda</h1>
+                    <div class="hero-title">
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Professional cybersecurity specialist with expertise in SOC Analysis, Network Security, 
+                        Penetration Testing, Threat Intelligence, and OSINT Investigations. Dedicated to securing 
+                        digital infrastructure through advanced threat detection and incident response capabilities.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="https://drive.google.com/uc?export=download&id=1tP1K4gYYYChSwVi5Hot1ShlcjfeLRFnf" target="_blank" class="btn btn--primary">Download Resume</a>
+                        <a href="#projects" class="btn btn--outline">View Projects</a>
+                        <a href="#contact" class="btn btn--secondary">Contact Me</a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://www.linkedin.com/in/dharanidhar-panda-92491724b/" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/dharani7656" target="_blank" class="social-link" aria-label="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:dharani.panda07@gmail.com" class="social-link" aria-label="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </a>
+                        <a href="https://tryhackme.com/p/pandadharani9"
+                        class="social-link"
+                        aria-label="TryHackMe"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                       <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="IconChangeColor" height="30" width="30"><title>TryHackMe</title><path d="M10.705 0C7.54 0 4.902 2.285 4.349 5.291a4.525 4.525 0 0 0-4.107 4.5 4.525 4.525 0 0 0 4.52 4.52h6.761a.625.625 0 1 0 0-1.25H4.761a3.273 3.273 0 0 1-3.27-3.27A3.273 3.273 0 0 1 6.59 7.08a.625.625 0 0 0 .7-1.035 4.488 4.488 0 0 0-1.68-.69 5.223 5.223 0 0 1 5.096-4.104 5.221 5.221 0 0 1 5.174 4.57 4.489 4.489 0 0 0-.488.305.625.625 0 1 0 .731 1.013 3.245 3.245 0 0 1 1.912-.616 3.278 3.278 0 0 1 3.203 2.61.625.625 0 0 0 1.225-.251 4.533 4.533 0 0 0-4.428-3.61 4.54 4.54 0 0 0-.958.105C16.556 2.328 13.9 0 10.705 0zm5.192 10.64a.925.925 0 0 0-.462.108.913.913 0 0 0-.313.29 1.27 1.27 0 0 0-.175.427 2.39 2.39 0 0 0-.054.514c0 .181.018.353.054.517.036.164.095.307.175.43a.899.899 0 0 0 .313.297c.127.073.281.11.462.11.18 0 .334-.037.46-.11a.897.897 0 0 0 .309-.296c.08-.124.137-.267.173-.431.036-.164.054-.336.054-.517 0-.18-.018-.352-.054-.514a1.271 1.271 0 0 0-.173-.426.901.901 0 0 0-.309-.291.917.917 0 0 0-.46-.108zm6.486 0a.925.925 0 0 0-.462.108.913.913 0 0 0-.313.29 1.27 1.27 0 0 0-.175.427 2.39 2.39 0 0 0-.053.514c0 .181.017.353.053.517.036.164.095.307.175.43a.899.899 0 0 0 .313.297c.127.073.281.11.462.11.18 0 .334-.037.46-.11a.897.897 0 0 0 .31-.296c.078-.124.136-.267.172-.431.036-.164.054-.336.054-.517 0-.18-.018-.352-.054-.514a1.271 1.271 0 0 0-.173-.426.901.901 0 0 0-.308-.291.916.916 0 0 0-.461-.108zm-8.537.068l-.84.618.313.43.476-.368v1.877h.603v-2.557zm6.486 0l-.841.618.314.43.477-.368v1.877h.603v-2.557zm-4.435.445c.08 0 .143.028.193.084.05.057.087.127.114.21.026.083.044.173.054.269a2.541 2.541 0 0 1 0 .533c-.01.097-.028.187-.054.27a.584.584 0 0 1-.114.21.243.243 0 0 1-.193.085.248.248 0 0 1-.195-.086.584.584 0 0 1-.118-.209 1.245 1.245 0 0 1-.056-.27 2.645 2.645 0 0 1 0-.533c.01-.096.029-.186.056-.27a.583.583 0 0 1 .118-.209.25.25 0 0 1 .195-.084zm6.486 0c.08 0 .144.028.193.084.05.057.087.127.114.21.027.083.044.173.054.269a2.541 2.541 0 0 1 0 .533c-.01.097-.027.187-.054.27a.584.584 0 0 1-.114.21.243.243 0 0 1-.193.085.249.249 0 0 1-.195-.086.581.581 0 0 1-.117-.209 1.245 1.245 0 0 1-.056-.27 2.642 2.642 0 0 1 0-.533c.01-.096.028-.186.056-.27a.58.58 0 0 1 .117-.209.25.25 0 0 1 .195-.084zm-2.191 3.51a.93.93 0 0 0-.463.109.908.908 0 0 0-.312.291c-.08.122-.139.263-.175.426a2.383 2.383 0 0 0-.054.514c0 .18.018.353.054.516.036.164.094.308.175.432a.91.91 0 0 0 .312.296.92.92 0 0 0 .463.11c.18 0 .333-.037.46-.11a.892.892 0 0 0 .308-.296 1.32 1.32 0 0 0 .174-.432c.036-.163.054-.335.054-.516 0-.18-.018-.352-.054-.514a1.274 1.274 0 0 0-.174-.426.89.89 0 0 0-.309-.291.918.918 0 0 0-.46-.108zm-6.402.07l-.841.617.314.43.476-.369v1.878h.604v-2.557zm2.125 0l-.841.617.314.43.477-.369v1.878h.603v-2.557zm2.116 0l-.84.617.313.43.477-.369v1.878h.603v-2.557zm2.16.443c.08 0 .144.028.194.085a.605.605 0 0 1 .114.21c.026.083.044.172.053.269a2.639 2.639 0 0 1 0 .532 1.28 1.28 0 0 1-.053.27.585.585 0 0 1-.114.21.244.244 0 0 1-.193.085.25.25 0 0 1-.196-.085.589.589 0 0 1-.117-.21 1.245 1.245 0 0 1-.056-.27 2.597 2.597 0 0 1 0-.532c.01-.097.028-.186.056-.27a.589.589 0 0 1 .117-.209.249.249 0 0 1 .196-.085zm-6.729 3.073a.676.676 0 0 0-.335.078.661.661 0 0 0-.227.211.91.91 0 0 0-.127.31c-.027.118-.04.242-.04.373s.013.256.04.375a.93.93 0 0 0 .127.313.65.65 0 0 0 .227.215c.092.053.204.08.335.08a.655.655 0 0 0 .334-.08.65.65 0 0 0 .225-.215c.057-.09.1-.194.125-.313a1.75 1.75 0 0 0 .04-.375c0-.13-.014-.255-.04-.373a.931.931 0 0 0-.125-.31.658.658 0 0 0-.225-.21.667.667 0 0 0-.334-.08zm3.086 0a.675.675 0 0 0-.336.078.661.661 0 0 0-.226.211.907.907 0 0 0-.127.31 1.69 1.69 0 0 0-.04.373c0 .131.013.256.04.375a.928.928 0 0 0 .127.313c.058.09.134.162.226.215.093.053.205.08.336.08a.655.655 0 0 0 .334-.08.65.65 0 0 0 .224-.215c.058-.09.1-.194.126-.313a1.752 1.752 0 0 0 0-.748.94.94 0 0 0-.126-.31.657.657 0 0 0-.224-.21.667.667 0 0 0-.334-.08zm5.108 0a.675.675 0 0 0-.336.078.661.661 0 0 0-.226.211.91.91 0 0 0-.127.31c-.027.118-.04.242-.04.373s.013.256.04.375a.931.931 0 0 0 .127.313c.058.09.134.162.226.215.093.053.205.08.336.08.13 0 .243-.027.334-.08a.65.65 0 0 0 .224-.215c.058-.09.1-.194.126-.313a1.75 1.75 0 0 0 .04-.375c0-.13-.014-.255-.04-.373a.943.943 0 0 0-.126-.31.657.657 0 0 0-.224-.21.668.668 0 0 0-.334-.08zm-6.658.05l-.61.448.227.311.346-.266v1.362h.438v-1.856zm3.068 0l-.61.448.227.311.346-.266v1.362h.438v-1.856zm5.108 0l-.611.448.228.311.346-.266v1.362h.438v-1.856zm-9.712.322c.058 0 .105.02.14.062a.421.421 0 0 1 .083.151.96.96 0 0 1 .04.196 1.932 1.932 0 0 1 0 .386.954.954 0 0 1-.04.197.421.421 0 0 1-.083.152.176.176 0 0 1-.14.061.18.18 0 0 1-.141-.06.427.427 0 0 1-.085-.153.887.887 0 0 1-.041-.197 1.96 1.96 0 0 1 0-.386.893.893 0 0 1 .04-.196.42.42 0 0 1 .086-.151.181.181 0 0 1 .141-.062zm3.086 0c.058 0 .104.02.14.062a.421.421 0 0 1 .082.151.94.94 0 0 1 .04.196 1.906 1.906 0 0 1 0 .386.93.93 0 0 1-.04.197.421.421 0 0 1-.082.152.176.176 0 0 1-.14.061.18.18 0 0 1-.141-.06.42.42 0 0 1-.086-.153.846.846 0 0 1-.04-.197 1.965 1.965 0 0 1-.011-.195c0-.057.004-.121.01-.191a.849.849 0 0 1 .041-.196.42.42 0 0 1 .086-.151.182.182 0 0 1 .141-.062zm5.108 0c.058 0 .104.02.14.062a.421.421 0 0 1 .082.151.92.92 0 0 1 .04.196 1.963 1.963 0 0 1 0 .386.943.943 0 0 1-.04.197.421.421 0 0 1-.082.152.177.177 0 0 1-.14.061.18.18 0 0 1-.142-.06.437.437 0 0 1-.085-.153.95.95 0 0 1-.04-.197 1.965 1.965 0 0 1-.011-.195c0-.057.004-.121.01-.191a.959.959 0 0 1 .04-.196.47.47 0 0 1 .086-.151.181.181 0 0 1 .142-.062zm-1.684 1.814a.675.675 0 0 0-.336.079.66.66 0 0 0-.227.21.91.91 0 0 0-.127.31 1.731 1.731 0 0 0 0 .748.939.939 0 0 0 .127.314c.059.09.134.162.227.215.093.053.205.08.336.08a.66.66 0 0 0 .334-.08.648.648 0 0 0 .224-.215c.058-.09.1-.195.126-.314a1.737 1.737 0 0 0-.001-.747.928.928 0 0 0-.125-.31.65.65 0 0 0-.224-.211.668.668 0 0 0-.334-.079zm3.063 0a.676.676 0 0 0-.336.079.664.664 0 0 0-.227.21.906.906 0 0 0-.127.31 1.74 1.74 0 0 0 0 .748.936.936 0 0 0 .127.314.66.66 0 0 0 .227.215c.092.053.204.08.336.08a.654.654 0 0 0 .334-.08.648.648 0 0 0 .223-.215c.058-.09.1-.195.126-.314a1.74 1.74 0 0 0 0-.747.928.928 0 0 0-.126-.31.65.65 0 0 0-.223-.211.666.666 0 0 0-.334-.079zm-1.545.05l-.611.448.228.312.346-.267v1.363h.438v-1.856zm-1.518.323c.057 0 .104.02.14.061a.42.42 0 0 1 .082.152.91.91 0 0 1 .04.195 1.966 1.966 0 0 1 0 .387.951.951 0 0 1-.04.197.421.421 0 0 1-.082.152.177.177 0 0 1-.14.06.18.18 0 0 1-.142-.06.428.428 0 0 1-.085-.152.914.914 0 0 1-.04-.197 1.96 1.96 0 0 1-.011-.195c0-.058.003-.122.01-.192a.923.923 0 0 1 .041-.195c.02-.06.048-.11.085-.152a.181.181 0 0 1 .142-.061zm3.063 0c.057 0 .104.02.14.061a.42.42 0 0 1 .082.152.94.94 0 0 1 .04.195 1.91 1.91 0 0 1 0 .387.93.93 0 0 1-.04.197.422.422 0 0 1-.083.152.175.175 0 0 1-.14.06.18.18 0 0 1-.141-.06.423.423 0 0 1-.085-.152.907.907 0 0 1-.04-.197 1.95 1.95 0 0 1 0-.387.915.915 0 0 1 .04-.195c.02-.06.048-.11.085-.152a.182.182 0 0 1 .142-.061zm-9.713.185a.465.465 0 0 0-.232.055.456.456 0 0 0-.157.146.627.627 0 0 0-.089.215 1.168 1.168 0 0 0-.027.259c0 .09.009.177.027.26a.648.648 0 0 0 .089.216c.04.063.093.112.157.149a.459.459 0 0 0 .232.056c.09 0 .168-.02.231-.056a.45.45 0 0 0 .156-.149.67.67 0 0 0 .087-.217 1.218 1.218 0 0 0 0-.518.647.647 0 0 0-.087-.215.448.448 0 0 0-.156-.146.458.458 0 0 0-.23-.055zm1.052.035l-.423.31.158.217.24-.185v.944h.303v-1.286zm-1.052.224c.04 0 .073.014.097.042a.284.284 0 0 1 .057.105.69.69 0 0 1 .028.136c.004.049.007.092.007.133 0 .04-.003.086-.007.135a.684.684 0 0 1-.028.136.285.285 0 0 1-.057.105.123.123 0 0 1-.097.043.125.125 0 0 1-.098-.043.298.298 0 0 1-.059-.105.612.612 0 0 1-.028-.136 1.39 1.39 0 0 1 0-.268.62.62 0 0 1 .028-.136.297.297 0 0 1 .06-.105.125.125 0 0 1 .097-.042zm3.775 1.394a.463.463 0 0 0-.232.054.452.452 0 0 0-.157.146.621.621 0 0 0-.088.214 1.19 1.19 0 0 0 0 .519.641.641 0 0 0 .088.217.46.46 0 0 0 .157.15.458.458 0 0 0 .232.054.454.454 0 0 0 .232-.055.45.45 0 0 0 .155-.149.664.664 0 0 0 .087-.217 1.189 1.189 0 0 0 0-.519.642.642 0 0 0-.087-.214.446.446 0 0 0-.155-.146.459.459 0 0 0-.232-.054zm1.052.034l-.423.31.158.216.24-.185v.945h.303V22.68zm-1.052.223c.04 0 .073.014.098.043a.3.3 0 0 1 .057.105.643.643 0 0 1 .027.135 1.31 1.31 0 0 1 0 .268.654.654 0 0 1-.027.137.307.307 0 0 1-.057.105.124.124 0 0 1-.098.042.125.125 0 0 1-.098-.042.293.293 0 0 1-.059-.105.618.618 0 0 1-.028-.137 1.364 1.364 0 0 1 0-.268.612.612 0 0 1 .028-.135.287.287 0 0 1 .06-.105.123.123 0 0 1 .097-.043z" id="mainIconPathAttribute"></path></svg>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
         </div>
-  
-        <div>
-          <label for="message" class="block text-lg mb-2">Message</label>
-          <textarea id="message" name="message" required rows="4"
-                    placeholder="Enter your message"
-                    class="w-full p-3 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-400"></textarea>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Cybersecurity Professional specializing in Threat Detection & Response</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a dedicated cybersecurity specialist with comprehensive expertise in SOC Analysis, Network Security, 
+                        Penetration Testing, Threat Intelligence, and OSINT Investigations. My experience spans across security 
+                        operations centers, incident response, and advanced threat hunting methodologies.
+                    </p>
+                    <p>
+                        With strong proficiency in industry-standard tools like KQL, Wireshark, Burp Suite, and SIEM platforms 
+                        (Splunk, ELK), I excel at detecting, analyzing, and mitigating complex cybersecurity threats. My technical 
+                        foundation in Python, SQL, and security frameworks enables me to develop custom solutions for enhanced security posture.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                    <circle cx="12" cy="16" r="1"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                </svg>
+                            </div>
+                            <span class="highlight-text">SOC Analysis & Threat Hunting</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                    <path d="M2 17l10 5 10-5"/>
+                                    <path d="M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <span class="highlight-text">Network Security Engineering</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"/>
+                                    <path d="M21 21l-4.35-4.35"/>
+                                </svg>
+                            </div>
+                            <span class="highlight-text">OSINT Investigations</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                </svg>
+                            </div>
+                            <span class="highlight-text">Penetration Testing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <!-- <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div> -->
+                    <div class="stat-item">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Security Tools</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">Target Roles</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                </div>
+            </div>
         </div>
-  
-        <button type="submit"
-                class="bg-blue-500 hover:bg-blue-600 px-8 py-3 rounded-full transition-transform transform hover:scale-105">
-          Send Message
-        </button>
-  
-        <p id="status" class="mt-4 text-center"></p>
-      </form>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills & Expertise</h2>
+                <p class="section-subtitle">Comprehensive cybersecurity toolkit and technical competencies</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">Technical & Analyst Skills</h3>
+                    <div class="skill-items">
+                        <div class="skill-item featured-skill">
+                            <span class="skill-name">KQL (Kusto Query Language)</span>
+                            <span class="skill-tag priority">Priority</span>
+                        </div>
+                        <div class="skill-item featured-skill">
+                            <span class="skill-name">Windows Event Viewer & Log Analysis</span>
+                            <span class="skill-tag priority">Priority</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Wireshark</span>
+                            <span class="skill-tag">Network Analysis</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Burp Suite</span>
+                            <span class="skill-tag">Web Security</span>
+                        </div>
+                        <div class="skill-item featured-skill">
+                            <span class="skill-name">OSINT (Open Source Intelligence)</span>
+                            <span class="skill-tag priority">Priority</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL Injection & Web Exploits</span>
+                            <span class="skill-tag">Web Security</span>
+                        </div>
+                        <div class="skill-item featured-skill">
+                            <span class="skill-name">OWASP Top 10 Awareness</span>
+                            <span class="skill-tag priority">Priority</span>
+                        </div>
+                        <div class="skill-item featured-skill">
+                            <span class="skill-name">SIEM Tools (Splunk, ELK)</span>
+                            <span class="skill-tag priority">Priority</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Endpoint Security & Malware Analysis</span>
+                            <span class="skill-tag">Security Analysis</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Network Traffic Monitoring</span>
+                            <span class="skill-tag">Network Security</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Email Phishing Detection</span>
+                            <span class="skill-tag">Threat Detection</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Social Engineering Knowledge</span>
+                            <span class="skill-tag">Security Awareness</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title">Security Tools Proficiency</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Nmap</span>
+                            <span class="skill-tag">Network Scanning</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Metasploit</span>
+                            <span class="skill-tag">Penetration Testing</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Nessus</span>
+                            <span class="skill-tag">Vulnerability Assessment</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Hydra</span>
+                            <span class="skill-tag">Password Cracking</span>
+                        </div>
+                        <div class="skill-item featured-skill">
+                            <span class="skill-name">Kali Linux</span>
+                            <span class="skill-tag priority">Expert</span>
+                        </div>
+                        <div class="skill-item featured-skill">
+                            <span class="skill-name">Parrot OS</span>
+                            <span class="skill-tag priority">Advanced</span>
+                        </div>
+                        <div class="skill-item featured-skill">
+                            <span class="skill-name">Linux/Windows Administration</span>
+                            <span class="skill-tag priority">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Programming & Scripting</h3>
+                    <div class="skill-items">
+                        <div class="skill-item skill-progress">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-progress">
+                            <div class="skill-info">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-progress">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-progress">
+                            <div class="skill-info">
+                                <span class="skill-name">Bash</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-progress">
+                            <div class="skill-info">
+                                <span class="skill-name">PowerShell</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Platforms & Systems</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Linux</span>
+                            <span class="skill-tag expert">Advanced</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Windows</span>
+                            <span class="skill-tag expert">Advanced</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Kali Linux</span>
+                            <span class="skill-tag expert">Expert</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Parrot OS</span>
+                            <span class="skill-tag expert">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Role-Specific Expertise Section -->
+    <section id="expertise" class="expertise">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Role-Specific Expertise</h2>
+                <p class="section-subtitle">Specialized capabilities for cybersecurity roles</p>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <rect x="7" y="7" width="3" height="9"/>
+                            <rect x="14" y="7" width="3" height="5"/>
+                        </svg>
+                    </div>
+                    <h3>SOC Analysis</h3>
+                    <ul>
+                        <li>24/7 Security Monitoring</li>
+                        <li>Incident Detection & Response</li>
+                        <li>Log Analysis & Correlation</li>
+                        <li>Threat Intelligence Integration</li>
+                        <li>Alert Triage & Escalation</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Network Security</h3>
+                    <ul>
+                        <li>Network Architecture Design</li>
+                        <li>Firewall Configuration</li>
+                        <li>IDS/IPS Management</li>
+                        <li>Network Traffic Analysis</li>
+                        <li>VPN & Secure Communications</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3>Penetration Testing</h3>
+                    <ul>
+                        <li>Vulnerability Assessment</li>
+                        <li>Web Application Testing</li>
+                        <li>Network Penetration Testing</li>
+                        <li>Social Engineering Testing</li>
+                        <li>Security Report Generation</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 0-8-3-8-6 0-3 3-6 8-6s8 3 8 6c0 3-3 6-8 6z"/>
+                            <path d="M17 16.5c-1.5-1.5-3-3-3-4.5 0-1.5 1.5-3 3-3s3 1.5 3 3c0 1.5-1.5 3-3 4.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Threat Intelligence</h3>
+                    <ul>
+                        <li>Threat Actor Profiling</li>
+                        <li>IOC Analysis & Hunting</li>
+                        <li>TTP Documentation</li>
+                        <li>Threat Landscape Assessment</li>
+                        <li>Intelligence Reporting</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="M21 21l-4.35-4.35"/>
+                        </svg>
+                    </div>
+                    <h3>OSINT Investigations</h3>
+                    <ul>
+                        <li>Digital Footprint Analysis</li>
+                        <li>Social Media Intelligence</li>
+                        <li>Domain & Infrastructure Research</li>
+                        <li>Threat Actor Attribution</li>
+                        <li>Evidence Collection & Documentation</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3>Cybersecurity Engineering</h3>
+                    <ul>
+                        <li>Security Architecture Design</li>
+                        <li>Security Tool Integration</li>
+                        <li>Automation & Orchestration</li>
+                        <li>Security Policy Development</li>
+                        <li>Risk Assessment & Mitigation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Cybersecurity innovations and security solutions</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Phishing Detection ML Model</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/dharani7656/-Real-Time-Phishing-Detection-with-ML" target="_blank" class="project-link" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Advanced machine learning model using Logistic Regression and Scikit-learn to detect phishing emails with 94% accuracy. 
+                        Features comprehensive preprocessing, real-time analysis, and automated threat assessment capabilities for SOC environments.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Email Security</span>
+                        <span class="tech-tag">Threat Detection</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Real-time Phishing Detection System</h3>
+                        <div class="project-links">
+                            <a href="https://ml-based-phishing-detection.onrender.com" target="_blank" class="project-link" aria-label="Live Demo">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15,3 21,3 21,9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Enterprise-grade Flask web application for real-time phishing detection with Gmail OAuth integration. 
+                        Provides instant threat assessment, automated email security analysis, and comprehensive reporting for security teams.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">OAuth</span>
+                        <span class="tech-tag">Real-time Analysis</span>
+                        <span class="tech-tag">Web Security</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Face Recognition Security System</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/dharani7656/genderapp" target="_blank" class="project-link" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Advanced computer vision-based authentication system using facial recognition for secure access control. 
+                        Features real-time detection, multi-factor authentication integration, and comprehensive security audit logging.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">Access Control</span>
+                        <span class="tech-tag">Security</span>
+                    </div>
+                </div>
+
+                <!-- Additional placeholder projects for cybersecurity portfolio -->
+                <div class="project-card placeholder-project">
+                    <div class="project-header">
+                        <h3 class="project-title">Network Traffic Analyzer</h3>
+                        <div class="project-links">
+                            <span class="project-status">In Development</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Advanced network traffic analysis tool using deep packet inspection for anomaly detection. 
+                        Integrates with SIEM platforms for real-time threat intelligence and automated incident response.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Wireshark</span>
+                        <span class="tech-tag">Network Security</span>
+                        <span class="tech-tag">SIEM Integration</span>
+                    </div>
+                </div>
+
+                <div class="project-card placeholder-project">
+                    <div class="project-header">
+                        <h3 class="project-title">SOC Alert Management System</h3>
+                        <div class="project-links">
+                            <span class="project-status">Planned</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Comprehensive SOC alert management platform with automated triage, escalation workflows, 
+                        and integration with popular SIEM solutions for enhanced security operations efficiency.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Splunk API</span>
+                        <span class="tech-tag">SOC Operations</span>
+                        <span class="tech-tag">Automation</span>
+                    </div>
+                </div>
+
+                <div class="project-card placeholder-project">
+                    <div class="project-header">
+                        <h3 class="project-title">Vulnerability Assessment Tool</h3>
+                        <div class="project-links">
+                            <span class="project-status">Concept</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Automated vulnerability assessment framework combining multiple scanning engines with 
+                        intelligent risk prioritization and detailed remediation guidance for enterprise environments.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Nessus API</span>
+                        <span class="tech-tag">Vulnerability Management</span>
+                        <span class="tech-tag">Risk Assessment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications & Achievements</h2>
+                <p class="section-subtitle">Professional credentials and continuous learning journey</p>
+            </div>
+            <div class="certifications-container">
+                <div class="current-certs">
+                    <h3 class="certs-section-title">Current Certifications</h3>
+                    <div class="certifications-grid">
+                        <div class="cert-card">
+                            <div class="cert-header">
+                                <div class="cert-badge" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; background: none; display: flex; align-items: center; justify-content: center;">
+                                     <img src="https://cdn.brandfetch.io/idtMmWnq7O/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1668610428555" alt="Certification Logo" style="width: 70%; height: 70%; object-fit: cover;">
+                                </div>
+                                <h4 class="cert-title">Cybersecurity Analyst Job Simulation</h4>
+                                <span class="cert-date">October 2024</span>
+                            </div>
+                            <p class="cert-issuer">Tata Group</p>
+                            <p class="cert-description">Comprehensive cybersecurity simulation covering threat analysis, incident response, and security operations center workflows.</p>
+                            <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Tata/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_n5jtYJ84WwJzeFD5T_1730130571474_completion_certificate.pdf" target="_blank" class="cert-link">View Certificate</a>
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-header">
+                                <div class="cert-badge" style="width: 59px; height: 48px; border-radius: 50%; overflow: hidden; background: none; display: flex; align-items: center; justify-content: center;">
+                                    <img src="https://cdn.brandfetch.io/idFw8DodCr/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1721117489739" alt="Certification Logo" style="width: 80%; height: 60%; object-fit: cover;">
+                                </div>
+                                <h4 class="cert-title">Cybersecurity Analyst Job Simulation</h4>
+                                <span class="cert-date">October 2024</span>
+                            </div>
+                            <p class="cert-issuer">Mastercard</p>
+                            <p class="cert-description">Advanced cybersecurity practices focusing on financial sector security, fraud detection, and payment security methodologies.</p>
+                            <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/mastercard/vcKAB5yYAgvemepGQ_mfxGwGDp6WkQmtmTf_n5jtYJ84WwJzeFD5T_1730032702020_completion_certificate.pdf" target="_blank" class="cert-link">View Certificate</a>
+
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-header">
+                                <div class="cert-badge" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; background: none; display: flex; align-items: center; justify-content: center;">
+                                      <img src="https://cdn.brandfetch.io/idIu-Ji9Le/w/320/h/320/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1670911863379" alt="Certification Logo" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                                <h4 class="cert-title">Cyber Job Simulation</h4>
+                                <span class="cert-date">June 2025</span>
+                            </div>
+                            <p class="cert-issuer">Deloitte Australia</p>
+                            <p class="cert-description">Simulated investigation of a cybersecurity breach including log analysis and detection of suspicious user activity in a SOC setting.</p>
+                            <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_n5jtYJ84WwJzeFD5T_1751267439136_completion_certificate.pdf" target="_blank" class="cert-link">View Certificate</a>
+                        </div>
+
+                        <div class="cert-card">
+    <div class="cert-header">
+        <div class="cert-badge" style="width: 48px; height: 50px; border-radius: 50%; overflow: hidden; background: none; display: flex; align-items: center; justify-content: center;">
+            <img src="https://cdn.brandfetch.io/idJFz6sAsl/w/400/h/400/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1748592533197" alt="Certification Logo" style="width: 100%; height: 98%; object-fit: cover;">
+        </div>
+        <h4 class="cert-title">Introduction to SIEM</h4>
+        <span class="cert-date">May 2025</span>
     </div>
-  </section>
-  <footer class="text-center py-6 bg-gray-900">© 2025 Your Name. All rights reserved.</footer>
-  
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
-
-    menuBtn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-
-    document.addEventListener('click', (event) => {
-      if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
-        menu.classList.add('hidden');
-      }
-    });
+    <p class="cert-issuer">LinkedIn Learning</p>
+    <p class="cert-description">Overview of SIEM fundamentals including log collection, correlation, alerting, and incident response in modern security operations.</p>
+    <a href="https://www.linkedin.com/learning/certificates/42498e3b8992bd25b829d2b1cfee4102c3dd9754008d3ddbdf322e20edf3581b" target="_blank" class="cert-link">View Certificate</a>
+</div>
 
 
-  
+<div class="cert-card">
+                    <div class="cert-header">
+                        <div class="cert-header">
+        <div class="cert-badge" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; background: none; display: flex; align-items: center; justify-content: center;">
+            <img src="https://cdn.brandfetch.io/idPfFKnQ0p/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1746294580581" alt="Certification Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+                        </div>
+                        <h4 class="cert-title">Pentesting & Privilege Escalation Course</h4>
+                        <span class="cert-date">April 2025</span>
+                    </div>
+                    <p class="cert-issuer">Packt via Coursera</p>
+                    <p class="cert-description">Hands-on learning in web exploitation, privilege escalation, and real-world penetration testing workflows using modern attacker techniques.</p>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/LCJCI9YT5XMB" target="_blank" class="cert-link">View Certificate</a>
+                </div>
+                        <div class="cert-card">
+                            <div class="cert-header">
+                                 <div class="cert-header">
+        <div class="cert-badge" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; background: none; display: flex; align-items: center; justify-content: center;">
+            <img src="https://cdn.brandfetch.io/idTqV2BNgX/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1741065942533" alt="Certification Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+                                <h4 class="cert-title">Learn Ethical Hacking from Scratch</h4>
+                                <span class="cert-date">January 2025</span>
+                            </div>
+                            <p class="cert-issuer">Udemy</p>
+                            <p class="cert-description">Comprehensive ethical hacking course covering penetration testing, vulnerability assessment, and advanced security auditing techniques.</p>
+                            <a href="https://www.udemy.com/certificate/UC-3cdb31df-2f90-460e-a966-6e53bb197260/" target="_blank" class="cert-link">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
 
-    // Close Mobile Menu by Clicking Anywhere
-    document.addEventListener('click', (e) => {
-        const menuToggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('menu');
+            
 
-        if (!menu.contains(e.target) && e.target !== menuToggle) {
-        menuToggle.checked = false; // Close the menu
-        }
-    });
-  </script>
 
+                <div class="target-certs">
+                    <h3 class="certs-section-title">Target Certifications</h3>
+                    <div class="target-certs-grid">
+                        <div class="target-cert-item">
+                           <div class="target-cert-icon" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; background: none; display: flex; align-items: center; justify-content: center;">
+            <img src="https://cdn.brandfetch.io/id5dCoVqYj/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1667978803447" alt="Certification Logo" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+                            <div class="target-cert-details">
+                                <h4>CompTIA Security+</h4>
+                                <p>Foundational cybersecurity certification</p>
+                            </div>
+                        </div>
+                        <div class="target-cert-item">
+                            <div class="target-cert-icon" style="width: 59px; height: 48px; border-radius: 50%; overflow: hidden; background: none; display: flex; align-items: center; justify-content: center;">
+            <img src="https://cdn.brandfetch.io/idn0uqZKlO/w/180/h/180/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1749568260610" alt="Certification Logo" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+                            <div class="target-cert-details">
+                                <h4>Certified Ethical Hacker (CEH)</h4>
+                                <p>Advanced penetration testing certification</p>
+                            </div>
+                        </div>
+                        <div class="target-cert-item">
+                            <div class="target-cert-icon" style="width: 59px; height: 48px; border-radius: 50%; overflow: hidden; background: none; display: flex; align-items: center; justify-content: center;">
+            <img src="https://cdn.brandfetch.io/id8Uwj88qV/w/354/h/354/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1751550695649" alt="Certification Logo" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+                            <div class="target-cert-details">
+                                <h4>CISSP</h4>
+                                <p>Advanced security management certification</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss cybersecurity opportunities and collaborations</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>dharani.panda07@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Availability</h4>
+                            <p>Open to opportunities</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form" action="https://formsubmit.co/dharani.panda07@gmail.com" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                    <input type="text" name="_honey" style="display:none">
+
+
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025 DharaniDhar Panda. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/dharanidhar-panda-92491724b/" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/dharani7656" target="_blank" class="social-link" aria-label="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script src="app.js"></script>
 </body>
-
 </html>
