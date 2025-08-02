@@ -1039,7 +1039,9 @@ body {
   border-radius: 50%;
   background: linear-gradient(45deg, var(--teal-accent), var(--navy-secondary)) border-box;
   -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: subtract;
+  mask-composite: subtract;
   opacity: 0;
   transition: opacity var(--transition-normal);
 }
@@ -2220,9 +2222,23 @@ select:focus {
 
   .hero-photo {
     margin-bottom: 1.5rem;
+    margin-top: 80px;
   }
 
   .hero-text {
     text-align: center;
   }
 }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 95%;
+    z-index: 1000;
+    height: 60px; /* Your navbar height */
+}
+
+body {
+    padding-top: 60px; /* Same as navbar height */
+}
+
